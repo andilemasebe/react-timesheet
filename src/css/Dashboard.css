@@ -1,0 +1,282 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.dashboard-loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+.app-container{
+    display: flex;
+    margin-top: 60px; /*Space for fixed navbar*/
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c62828;
+}
+
+/* Summary Cards */
+.dashboard-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.summary-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-card h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.total-hours {
+    border-top: 4px solid #4caf50;
+}
+
+.projects-count {
+    border-top: 4px solid #2196f3;
+}
+
+.entries-count {
+    border-top: 4px solid #ff9800;
+}
+
+/* Charts Section */
+.dashboard-charts {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.chart {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Project Breakdown Chart */
+.project-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-name {
+    width: 120px;
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-bar-wrapper {
+    flex: 1;
+    height: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.project-hours {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Weekly Trend Chart */
+.weekly-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    padding-top: 20px;
+}
+
+.weekly-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.weekly-bar-wrapper {
+    width: 40px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.weekly-bar {
+    width: 100%;
+    background-color: #2196f3;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+}
+
+.weekly-hours {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+    font-weight: 500;
+}
+
+.week-label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Recent Entries */
+.recent-entries {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-entries h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.recent-entries table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-entries th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.recent-entries td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 14px;
+}
+
+.recent-entries tr:last-child td {
+    border-bottom: none;
+}
+
+.recent-entries tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+.add-entry-link, .view-all-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.add-entry-link:hover, .view-all-link:hover {
+    text-decoration: underline;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-summary, .dashboard-charts {
+        flex-direction: column;
+    }
+    
+    .summary-card, .chart {
+        margin-bottom: 20px;
+    }
+    
+    .project-name {
+        width: 80px;
+    }
+}
